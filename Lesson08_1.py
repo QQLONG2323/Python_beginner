@@ -1,3 +1,5 @@
+# 此版本跟Lesson08_1.ipynb相比，比較兩光
+
 import random
 def playGame():
     print("====================猜數字遊戲====================\n")
