@@ -1,3 +1,5 @@
+# 請輸入本期大樂透電腦選號的組數:10
+
 import random
 
 def lottery(): 
