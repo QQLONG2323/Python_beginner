@@ -1,10 +1,10 @@
-import c.d
-import c.d as e
-from c.d import func3
-from c.d import func3 as f
+import lesson_12_1_b
+from lesson_12_1_b.c import func3
+import lesson_12_1_b.c as e
+from lesson_12_1_b.c import func3 as f
 
 
-c.d.func3()
+lesson_12_1_b.c.func3()
 func3()
 f()
 e.func3()

@@ -1,10 +1,8 @@
-import b
+import lesson_12_1_a
+from lesson_12_1_a import fun1
+from lesson_12_1_a import fun1 as f
 
-from b import fun1
-
-from b import fun1 as f
-
-b.fun1()
+lesson_12_1_a.fun1()
 
 fun1()
 
