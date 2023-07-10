@@ -10,6 +10,7 @@ print(p1.sex)
 p1.age = 40
 print(p1.age)
 
+print('============')
 
 p2 = Person("友中余", 18, False)
 print(p2)
