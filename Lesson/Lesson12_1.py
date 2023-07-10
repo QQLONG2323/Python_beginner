@@ -1,8 +1,8 @@
-import lesson_12_1_a
-from lesson_12_1_a import fun1
-from lesson_12_1_a import fun1 as f
+import Lesson12_1_a
+from Lesson12_1_a import fun1
+from Lesson12_1_a import fun1 as f
 
-lesson_12_1_a.fun1()
+Lesson12_1_a.fun1()
 
 fun1()
 
