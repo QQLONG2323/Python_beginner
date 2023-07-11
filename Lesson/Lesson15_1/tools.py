@@ -8,11 +8,11 @@ def add(a, b) -> float:
     return a + b
 
 class Tool():
-    ONE = 1
-    TWO = 2
-    THREE = 3
-    FOUR = 4
-    FIVE = 5
+    ONE = 6
+    TWO = 7
+    THREE = 8
+    FOUR = 9
+    FIVE = 10
     
     @staticmethod
     def add(a, b) -> float:
