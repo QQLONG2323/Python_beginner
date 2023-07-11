@@ -10,4 +10,4 @@ class Taiwan_AQI():
         if(response.ok):
             print(response.text)
         else:
-            raise Exception("下載失敗")
+            raise Exception("下載失敗", '真的失敗')
