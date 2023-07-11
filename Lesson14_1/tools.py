@@ -36,3 +36,19 @@ class BMI(Person):
     @property
     def bmi(self) -> float:
         return round(self.weight / (self.height/100) **2, ndigits = 2)
+
+
+class Student(Person):
+    def __init__(self, n, chinese, english, math, **kwargs) -> None:
+        super().__init__(n, **kwargs)
+        self.chinese = chinese
+        self.english = english
+        self.math = math
+
+    @property #decorator property
+    def sum(self) -> float:
+        return self.chinese + self.english + self.math
+    
+    @property
+    def average(self) -> float:
+        return round(self.sum / 3.0, ndigits=2)
