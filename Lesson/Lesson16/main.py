@@ -5,6 +5,7 @@ def main():
         Taiwan_AQI.download_AQI()
     except Exception as err:
         print(err.args)
+        print(str(err))
         return
 
 
