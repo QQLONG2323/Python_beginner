@@ -13,21 +13,21 @@
 from tools import Taiwan_AQI
 
 def get_best(dataList) -> list:
-    sorted_data = sorted(dataList, key = lambda a:a.aqi)      
-    def out_aqi_999(site):
-        return site.aqi != 999
-    filter_data = filter(out_aqi_999, sorted_data)
-    filter_data = list(filter_data)
-    return filter_data[:3]
-        
-
-def get_bad(dataList) -> list:
-    sorted_data = sorted(dataList, key = lambda a:a.aqi)      
+    sorted_data = sorted(dataList, key = lambda a:a.aqi, reverse = True)      
     def out_aqi_999(site):
         return site.aqi != 999
     filter_data = filter(out_aqi_999, sorted_data)
     filter_data = list(filter_data)
     return filter_data[-3:]
+        
+
+def get_bad(dataList) -> list:
+    sorted_data = sorted(dataList, key = lambda a:a.aqi, reverse = True)      
+    def out_aqi_999(site):
+        return site.aqi != 999
+    filter_data = filter(out_aqi_999, sorted_data)
+    filter_data = list(filter_data)
+    return filter_data[:3]
 
 def print_site_level(dataList) -> None:
     print("各站點目前等級: ")
@@ -55,17 +55,18 @@ def main():
         aqi_list = Taiwan_AQI.download_AQI()
     except Exception as err:
         print(err.args)
+        #print(str(err))
         return
     
     good3_list = get_best(aqi_list)
     print("aqi目前站點最好的3個: ")
+    good3_list.reverse() #將三個數字由小到大排列好
     for site in good3_list:
         print(site)
     
     print("\n")
 
-    bad3_list = get_bad(aqi_list)
-    bad3_list.reverse()
+    bad3_list = get_bad(aqi_list)    
     print("aqi目前站點最差的3個: ")
     for site in bad3_list:
         print(site)
